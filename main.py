@@ -2,14 +2,15 @@ import pygame
 pygame.init()
 
 
+
 #consants
 WIDTH = 1400
 HEIGHT = 800
 TITLE = "A Star Wars Adventure"
-
+BACKGROUND_IMAGE = 'images/space-background.png'
 #Background music for the majority of the game
 pygame.mixer.music.load('music/main_theme.mp3')
-pygame.mixer.music.play(-1)
+pygame.mixer.music.play(0)
 
 #background level 1
 pygame.image.load('images/space-background.png')
@@ -25,9 +26,10 @@ class GameObject:
         self.speed = speed
         self.image = image
         #self.pos = image.get_rect(0, height)
-    def move(self):
-        self.pos = self.pos.move(0, self.speed)
+        self.draw = pygame.image.load(self.image)
+    #def move(self):
+        #self.pos = self.pos.move(0, self.speed)
     #if self.pos.right > 600:
     #    self.pos.left = 0
 novaship = GameObject('images/nova-ship.png', 80, 10)
-screen.blit(novaclass, [700, 800])
+novaship.draw()

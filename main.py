@@ -10,5 +10,5 @@ TITLE = "A Star Wars Adventure"
 #other variables
 
 #music
-pygame.music.mixer.load('music/main-theme')
-pygame.music.mixer.play(-1)
+pygame.mixer.music.load('music/main-theme.mp3')
+pygame.mixer.music.play(-1)
